@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class UIMainScene : MonoBehaviour
 {
     public static UIMainScene Instance { get; private set; }
-    
+
     public interface IUIInfoContent
     {
         string GetName();
@@ -72,5 +72,10 @@ public class UIMainScene : MonoBehaviour
             m_CurrentContent = content;
             InfoPopup.Name.text = content.GetName();
         }
+    }
+
+    public void ExitMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

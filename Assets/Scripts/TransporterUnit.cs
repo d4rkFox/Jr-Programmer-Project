@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,13 @@ public class TransporterUnit : Unit
     private Building.InventoryEntry m_Transporting = new Building.InventoryEntry();
 
     // We override the GoTo function to remove the current transport target, as any go to order will cancel the transport
+
+    private void SetColor(Color teamColor)
+    {
+        throw new NotImplementedException();
+    }
+
+
     public override void GoTo(Vector3 position)
     {
         base.GoTo(position);
